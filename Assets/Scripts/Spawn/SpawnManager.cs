@@ -52,6 +52,7 @@ public class SpawnManager : MonoBehaviour
         {
             GameObject enemyObj = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             _enemies.Add(enemyObj.GetComponent<EnemyStats>());
+            enemyObj.transform.parent = gameObject.transform;
         }
     }
     
